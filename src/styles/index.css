@@ -11,6 +11,20 @@ body {
     font-family: Arial, sans-serif;
     user-select: none;
     -webkit-user-select: none;
+
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+
+
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 #price {
     display: flex;
