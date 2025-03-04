@@ -1,7 +1,7 @@
 html, body {
     overflow: hidden;
-    width: max-content;
-    height: max-content;
+    width: 100%;
+    height: 100%;
     background: transparent;
     margin: 0;
     padding: 0;
@@ -11,20 +11,21 @@ body {
     font-family: Arial, sans-serif;
     user-select: none;
     -webkit-user-select: none;
-
-
     margin: 0;
     padding: 0;
     overflow: hidden;
     background: transparent;
-
-
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    
+    /* Add display flex to enable full-height content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #price {
     display: flex;
@@ -40,27 +41,37 @@ body {
     border: 1px solid rgba(255,255,255,0.1);
     pointer-events: auto;
     white-space: nowrap;
-    min-width: fit-content;
     cursor: context-menu;
     -webkit-app-region: drag;
+    
+    /* Make the price container take the full size */
+    width: calc(100% - 32px); /* Full width minus padding */
+    height: calc(100% - 16px); /* Full height minus padding */
+    box-sizing: border-box;
+    margin: 0;
 }
 .price-row {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 12px;
     width: 100%;
     -webkit-app-region: no-drag;
+    justify-content: space-between;
+    height: 100%;
 }
 .bitcoin-icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    margin-right: 4px;
+    margin-right: 0;
+    flex-shrink: 0;
 }
 .main-price {
     font-weight: bold;
     letter-spacing: -0.5px;
     -webkit-app-region: no-drag;
+    flex-grow: 1;
+    text-align: center;
 }
 .price-change {
     font-size: 16px;
@@ -69,4 +80,5 @@ body {
     border-radius: 8px;
     background: rgba(0,0,0,0.2);
     -webkit-app-region: no-drag;
+    flex-shrink: 0;
 }
