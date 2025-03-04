@@ -12,7 +12,7 @@
       {
         "title": "bitcoin-widget",
         "width": 300,
-        "height": 100,
+        "height": 60,
         "resizable": false,
         "decorations": false,
         "transparent": true,
@@ -21,6 +21,7 @@
         "fullscreen": false,
         "skipTaskbar": true,
         "hiddenTitle": true
+        
       }
     ],
     "security": {
