@@ -7,7 +7,7 @@ html, body {
     padding: 0;
 }
 body {
-    -webkit-app-region: drag;
+    -webkit-app-region: no-drag;
     font-family: Arial, sans-serif;
     user-select: none;
     -webkit-user-select: none;
