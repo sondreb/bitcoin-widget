@@ -8,11 +8,11 @@
     <script type="module" src="/main.js" defer></script>
   </head>
 
-  <body>
+  <body data-tauri-drag-region>
     <div id="price" data-tauri-drag-region>
-      <div class="price-row">
+      <div class="price-row" data-tauri-drag-region>
         <img src="/icon.png" class="bitcoin-icon" alt="Bitcoin Icon" />
-        <span class="main-price" id="btc-price">$0.00</span>
+        <span class="main-price" id="btc-price" data-tauri-drag-region>$0.00</span>
         <span class="price-change" id="btc-change">0.00%</span>
       </div>
     </div>

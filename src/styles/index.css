@@ -5,6 +5,7 @@ html, body {
     background: transparent;
     margin: 0;
     padding: 0;
+    -webkit-app-region: drag; /* Make entire window draggable */
 }
 body {
     -webkit-app-region: no-drag;
@@ -24,8 +25,8 @@ body {
     
     /* Add display flex to enable full-height content */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
 }
 #price {
     display: flex;
@@ -44,11 +45,14 @@ body {
     cursor: context-menu;
     -webkit-app-region: drag;
     
-    /* Make the price container take the full size */
-    width: calc(100% - 32px); /* Full width minus padding */
-    height: calc(100% - 16px); /* Full height minus padding */
+    /* Remove all spacing to fill window completely */
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
 }
 .price-row {
     display: flex;
@@ -58,6 +62,9 @@ body {
     -webkit-app-region: no-drag;
     justify-content: space-between;
     height: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    -webkit-app-region: drag; /* Make price row draggable */
 }
 .bitcoin-icon {
     width: 20px;
@@ -72,6 +79,7 @@ body {
     -webkit-app-region: no-drag;
     flex-grow: 1;
     text-align: center;
+    -webkit-app-region: drag; /* Make price text draggable */
 }
 .price-change {
     font-size: 16px;
